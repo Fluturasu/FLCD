@@ -50,22 +50,22 @@ class Analyser:
         line_number = 1
         while line:
             line = line.strip()
-            atoms = re.split("(>=|<=|!=|<|>|=|\{|\}|\[|\]|\{|\}|;|:|\+|\*|/|-|\(|\)| |,)", line)
-            for atom in atoms:
-                if not atom:
+            words = re.split("(>=|<=|!=|<|>|=|\{|\}|\[|\]|\{|\}|;|:|\+|\*|/|-|\(|\)| |,)", line)
+            for word in words:
+                if not word:
                     continue
-                if atom in self.__tokens:
-                    if atom != " ":
-                        self.genPIF(atom, -1)
+                if word in self.__tokens:
+                    if word != " ":
+                        self.genPIF(word, -1)
                 else:
-                    if self.checkIndentifier(atom) or self.checkConstant(atom):
+                    if self.checkIndentifier(word) or self.checkConstant(word):
                         try:
-                            index = self.__ST.insertBST(atom)
-                            self.genPIF(atom, index)
+                            index = self.__ST.insertBST(word)
+                            self.genPIF(word, index)
                         except DuplicateError as e:  #
                             pass
                     else:
-                        raise LexicalError(f"Error at line {line_number}: invalid atom detected: '{atom}'")
+                        raise LexicalError(f"Error at line {line_number}: invalid word detected: '{word}'")
             line = toAnalyse.readline()
             line_number += 1
 
