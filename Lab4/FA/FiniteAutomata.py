@@ -65,5 +65,7 @@ class FA:
                     found = True
             if not found:
                 return False
-        return True
+        if q in self.__finalStates:
+            return True
+        return False
 
