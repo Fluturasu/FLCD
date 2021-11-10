@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfcb535f-6d96-4fb7-b7b3-dd7408cdd8cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab4/Analyser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/BST/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/FA/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/LanguageStructure/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +94,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
